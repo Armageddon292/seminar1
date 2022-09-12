@@ -26,17 +26,6 @@ void PrintArray(int[,] array)
     }
 }
 
-Console.WriteLine("Введите число строк: ");
-int m = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите число столбцов: ");
-int n = int.Parse(Console.ReadLine());
-
-int[,] myArray = GetArray(m, n, 0, 10);
-PrintArray(myArray);
-
-Console.WriteLine("Введите число которое хотите найти в массиве: ");
-int Number = int.Parse(Console.ReadLine());
-
 void EstNumber (int num, int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
@@ -52,5 +41,16 @@ void EstNumber (int num, int[,] array)
     }    
     Console.WriteLine("Такого числа в массиве нет");
 }
+
+Console.WriteLine("Введите число строк: ");
+int m = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите число столбцов: ");
+int n = int.Parse(Console.ReadLine());
+
+int[,] myArray = GetArray(m, n, 0, 10);
+PrintArray(myArray);
+
+Console.WriteLine("Введите число которое хотите найти в массиве: ");
+int Number = int.Parse(Console.ReadLine());
 
 EstNumber(Number, myArray);
